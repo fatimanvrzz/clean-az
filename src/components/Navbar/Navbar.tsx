@@ -4,10 +4,10 @@ import { IoIosArrowDown } from "react-icons/io";
 
 const Navbar = () => {
   return (
-    <div className="flex items-center">
-      <div className="flex border-1 items-center mt-[33px] w-[1300px] justify-between">
+    <div className="flex items-center cursor-pointer">
+      <div className="flex items-center mt-[33px] w-[1300px] justify-between">
         {/* Logo, Links sections */}
-        <div className="flex gap-[300px] p-2">
+        <div className="flex gap-[300px]">
           <div >
             <Link to='/'>
               <img src={Logo} alt="Logo" className="" /></Link>
@@ -15,10 +15,10 @@ const Navbar = () => {
           <div className="flex items-center">
             <ul className="flex gap-[41px]">
               <li>
-                <Link className="flex gap-[3px] items-center" to='/services'>Services <IoIosArrowDown/></Link>
+                <Link className="flex gap-[3px] items-center" to='/services'>Services <IoIosArrowDown /></Link>
               </li>
               <li>
-                <Link to='/aboutus'>About Us</Link>
+                <Link to='/about-us'>About Us</Link>
               </li>
               <li>
                 <Link to='/blog'>Blog</Link>
@@ -32,10 +32,12 @@ const Navbar = () => {
         {/* Translate and Book a Service section*/}
         <div className="flex items-center gap-[29px]">
           <div className="p-2 flex items-center">
-            En <IoIosArrowDown/> 
+            En <IoIosArrowDown />
           </div>
-          <div className="border-1 ">
-            <button className="text-white rounded">Book a Service</button>
+          <div className="bg-[#0F42FF] rounded-2xl px-10 py-4 ">
+            <Link to='/book-a-service'>
+              <button className="text-white cursor-pointer">Book a Service</button>
+            </Link>
           </div>
         </div>
       </div>
