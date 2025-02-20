@@ -1,16 +1,14 @@
-import './App.css'
-import HomePage from './Pages/HomePage'
-
-
+import "./App.css";
+import HomePage from "./Pages/HomePage";
 
 function App() {
-
   return (
-    <>
-      <HomePage />
-    </>
-  )
+    <div className="flex justify-center items-center w-full">
+      <div className="max-w-[1300px] w-full px-4">
+        <HomePage />
+      </div>
+    </div>
+  );
 }
 
-export default App
-  
+export default App;
