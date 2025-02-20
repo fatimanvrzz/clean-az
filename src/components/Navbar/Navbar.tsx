@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <div className="flex items-center cursor-pointer">
-      <div className="flex items-center mt-[33px] w-[1300px] justify-between">
+      <div className="flex items-center mt-[10px] w-[1300px] justify-between">
 
         {/* Logo */}
         <div className="flex 2xl:block xl:block lg:block md:block sm:block text-center">
@@ -58,24 +58,24 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Burger Menu Button (Mobile) */}
-      <div className="flex md:hidden">
-        <button onClick={() => setMenu(!menu)}>
-          {menu ? <GoX size={30} /> : <img src={BurgerMenu} alt="Burger Menu Icon" className="w-[30px]" />}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      {menu && (
-        <div className="absolute top-16 right-0 bg-white shadow-lg p-4 w-64 md:hidden">
-          <ul className="flex flex-col gap-4">
-            <li><Link to="/services">Services</Link></li>
-            <li><Link to="/about-us">About Us</Link></li>
-            <li><Link to="/blog">Blog</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-          </ul>
+      {/* Burger (Mobile) */}
+        <div className="flex md:hidden">
+          <button onClick={() => setMenu(!menu)}>
+            {menu ? <GoX size={30} /> : <img src={BurgerMenu} alt="Burger Menu Icon" className="w-[30px]" />}
+          </button>
         </div>
-      )}
+
+      {/* Mobile */}
+        {menu && (
+          <div className="absolute top-16 right-0 bg-white shadow-lg p-4 w-64 md:hidden">
+            <ul className="flex flex-col gap-4">
+              <li><Link to="/services">Services</Link></li>
+              <li><Link to="/about-us">About Us</Link></li>
+              <li><Link to="/blog">Blog</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+            </ul>
+          </div>
+        )}
 
       </div>
     </div>

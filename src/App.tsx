@@ -4,7 +4,7 @@ import HomePage from "./Pages/HomePage";
 function App() {
   return (
     <div className="flex justify-center items-center w-full">
-      <div className="max-w-[1300px] w-full px-4">
+      <div className="max-w-[1300px] w-full">
         <HomePage />
       </div>
     </div>
